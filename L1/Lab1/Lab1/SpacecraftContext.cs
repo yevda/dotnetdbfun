@@ -28,9 +28,9 @@ namespace Lab1
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Combat>().ToTable(nameof(Combat));
-            //modelBuilder.Entity<Research>().ToTable(nameof(Research));
-            //modelBuilder.Entity<Logistic>().ToTable(nameof(Logistic));
+            modelBuilder.Entity<Combat>().ToTable(nameof(Combat));
+            modelBuilder.Entity<Research>().ToTable(nameof(Research));
+            modelBuilder.Entity<Logistic>().ToTable(nameof(Logistic));
         }
     }
 }
