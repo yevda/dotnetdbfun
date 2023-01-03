@@ -28,10 +28,10 @@ namespace ConsoleApp1
                 SqlConnection cnn;
                 string connectionString = @"Server=SSW-WSA-9220;Database=AdventureWorks2019;Trusted_Connection=True;TrustServerCertificate=True";
                 cnn = new SqlConnection(connectionString);
-                //var command = new SqlCommand("EXECUTE [HumanResources].[uspGetEmployeesKhai] 291, @SName OUT;", cnn);
-                //command.Parameters.Add("SName", SqlDbType.NVarChar).Value = "SName";
-                var command = new SqlCommand("SELECT * FROM [dbo].[GetEmployeesByIdKhai] (5);", cnn);
-                
+                var command = new SqlCommand("EXECUTE [HumanResources].[uspGetEmployeesKhai] 291, @SName OUT;", cnn);
+                command.Parameters.Add("SName", SqlDbType.NVarChar).Value = "SName";
+                //var command = new SqlCommand("SELECT * FROM [dbo].[GetEmployeesByIdKhai] (5);", cnn);
+
                 var myvar = 0;
                 cnn.Open();
                 var res = command.ExecuteNonQuery();
